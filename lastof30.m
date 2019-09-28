@@ -1,0 +1,10 @@
+x=[1:0.1:5]
+y=[1:0.1:5]
+[x,y]=meshgrid(x,y)
+z=(x.*(exp(x)))./(2.*y)
+subplot(2,2,1),surf(x,y,z)
+subplot(2,2,2),mesh(x,y,z)
+z=(5.*x)./((x.^2)+(y.^2)+1)
+subplot(2,2,3),surf(x,y,z)
+z=log((x.^2)+(y.^2))
+subplot(2,2,4),mesh(x,y,z)
